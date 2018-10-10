@@ -1,6 +1,6 @@
 <div class="container">
   <div class="calculator">
-    <div class="calculator__display">{{result}}</div>
+    <app-display [result]='result'></app-display>
     <div class="calculator__keys">
         <button class="key--operator" *ngIf="science_flag">%</button>
         <button class="key--operator" *ngIf="science_flag">E²</button>
@@ -10,6 +10,7 @@
       <button class="key--operator" >-</button>
       <button class="key--operator" *ngIf="!science_flag">÷</button>
       <button class="key--operator" >&times;</button>
+
       <button (click)='printScreen("7")'>7</button>
       <button (click)='printScreen("8")'>8</button>
       <button (click)='printScreen("9")'>9</button>
@@ -21,6 +22,7 @@
       <button (click)='printScreen("3")'>3</button>
       <button (click)='printScreen("0")'>0</button>
       <button>AC</button>
+      
       <button *ngIf="!science_flag">.</button>
       <button *ngIf="science_flag">÷</button>
       <button class="key--equal">=</button>
