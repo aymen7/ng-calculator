@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="calculator">
+    <app-display [result]='result'></app-display>
+    <div class="calculator__keys">
+      <button class="key--operator" >+</button>
+      <button class="key--operator" >-</button>
+      <button class="key--operator" >÷</button>
+      <button class="key--operator" >&times;</button>
+      <button (click)='printScreen("7")'>7</button>
+      <button (click)='printScreen("8")'>8</button>
+      <button (click)='printScreen("9")'>9</button>
+      <button (click)='printScreen("4")'>4</button>
+      <button (click)='printScreen("5")'>5</button>
+      <button (click)='printScreen("6")'>6</button>
+      <button (click)='printScreen("1")'>1</button>
+      <button (click)='printScreen("2")'>2</button>
+      <button (click)='printScreen("3")'>3</button>
+      <button (click)='printScreen("0")'>0</button>
+      <button>AC</button>
+      <button >.</button>
+      <button class="key--equal">=</button>
+    </div>
+  </div>
+</div>
