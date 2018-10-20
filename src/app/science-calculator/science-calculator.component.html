@@ -2,13 +2,13 @@
     <div class="calculator">
       <app-display [result]='result'></app-display>
       <div class="calculator__keys">
-          <button class="key--operator" >%</button>
-          <button class="key--operator" >E²</button>
+          <button class="key--operator" (click)='registerAction("%")'>%</button>
+          <button class="key--operator" (click)='registerAction("a^b")'>a^b</button>
           <button class="key--operator" >#</button>
           <button class="key--operator" >$</button>
-        <button class="key--operator" >+</button>
-        <button class="key--operator" >-</button>
-        <button class="key--operator" >&times;</button>
+        <button class="key--operator" (click)='registerAction("+")'>+</button>
+        <button class="key--operator" (click)='registerAction("-")'>-</button>
+        <button class="key--operator" (click)='registerAction("*")'>&times;</button>
   
         <button (click)='printScreen("7")'>7</button>
         <button (click)='printScreen("8")'>8</button>
@@ -20,10 +20,10 @@
         <button (click)='printScreen("2")'>2</button>
         <button (click)='printScreen("3")'>3</button>
         <button (click)='printScreen("0")'>0</button>
-        <button>AC</button>
-        <button >÷</button>
-        <button>.</button>
-        <button class="key--equal">=</button>
+        <button (click)='clean()'>AC</button>
+        <button (click)='registerAction("÷")'>÷</button>
+        <button (click)='printScreen(".")'>.</button>
+        <button class="key--equal" (click)="calculate()">=</button>
       </div>
     </div>
   </div>
