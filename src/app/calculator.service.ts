@@ -17,7 +17,7 @@ export class CalculatorService {
   addOpt(value: string): any {
     this.optHistory.next(value);
   }
-  calculate(nbr1: number, nbr2: number): number {
+  calculate(nbr1: number, nbr2?: number): number {
     // using value we can get the last value of BehaviorSubject
     const opt: string = this.optHistory.getValue();
     switch (opt) {
@@ -33,8 +33,11 @@ export class CalculatorService {
         return (nbr1 * nbr2) / 100;
       case 'a^b':
         return Math.pow(nbr1, nbr2);
+      case 'cos':
+        return Math.cos(nbr1);
+      case 'sin':
+        return Math.sin(nbr1);
         default:
-          console.log('just a default message');
     }
   }
 }

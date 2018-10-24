@@ -32,7 +32,7 @@ export class ScienceCalculatorComponent implements OnInit, Calculator {
     console.log(`last result is: ${result}`);
     this._calcService.resultHistory.subscribe({
       next: (v) => {
-        this.result = String(this._calcService.calculate(v, result));
+        this.result = String(this._calcService.calculate(result, v));
       }
     });
   }

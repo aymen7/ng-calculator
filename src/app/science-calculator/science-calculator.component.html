@@ -4,8 +4,8 @@
       <div class="calculator__keys">
           <button class="key--operator" (click)='registerAction("%")'>%</button>
           <button class="key--operator" (click)='registerAction("a^b")'>a^b</button>
-          <button class="key--operator" >#</button>
-          <button class="key--operator" >$</button>
+          <button class="key--operator" (click)='registerAction("cos")'>cos</button>
+          <button class="key--operator" (click)='registerAction("sin")'>sin</button>
         <button class="key--operator" (click)='registerAction("+")'>+</button>
         <button class="key--operator" (click)='registerAction("-")'>-</button>
         <button class="key--operator" (click)='registerAction("*")'>&times;</button>
